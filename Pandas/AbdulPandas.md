@@ -1,3 +1,5 @@
+
+
 Structures
 ===
 
@@ -24,7 +26,7 @@ DataFrames
 + `df.columns`: Labels for the Columns. (Type: pandas.core.indexes.base.Index)
 + `df.values`: Actual content of the table. (Type: numpy.ndarray)
 
-pandas.core.indexes.base.Index (Used for both row index and column)
+pandas.core.indexes.base.Index (Used for both row index and column label)
 ---
 
 + Get all index values: df.index.values (*INDEX is the label of the row*)

@@ -1,5 +1,3 @@
-
-
 Structures
 ===
 
@@ -31,9 +29,19 @@ pandas.core.indexes.base.Index (Used for both row index and column label)
 
 + Get all index values: df.index.values (*INDEX is the label of the row*)
 
-### Getting integer position and labels
+### Index and Column Name
+
+#### Title
+
++ Set title name: df.index.name = 'my index title'
+
+#### Setting Index and Column names
+
+#### Getting integer position and labels
 
 + Get row label by providing the integer position: `df.index[0]`
++ Get row integer position by providing the row label: df.index.get_loc(0)
++ Get column label by providing the integer position: `df.columns[0]`
 + Get column integer position by providing the label: `df.columns.get_loc('a')`
 
 DataFrame Read Operations
@@ -74,7 +82,8 @@ Most importantly, it only selects data by the LABEL of the rows and columns.
 > * A slice with labels
 > e.g.: `df.loc[['row_name1', 'row_name2'], 'col_name1']` OR `df.loc['row_name1':'row_name2', ['col_name1', 'col_name2']]` OR `df.loc[:'row_name3', 'col_name4':]` OR `df.loc[:, ['col_name2', 'col_name3']]`, etc.
 
-+ Select row by index and column by label: `df.loc[df.index[<ROW_NUMBER>], '<COLUMN_NAME>']`
++ Select row by integer position and column by label: `df.loc[df.index[<ROW_NUMBER>], '<COLUMN_NAME>']`
++ Select row by label and column by integer position: `df.loc[<ROW_INDEX_LABEL>, df.columns[<COLUMN_NUMBER>]]`
 
 ### `.iloc` Indexer
 
@@ -88,6 +97,9 @@ The `.iloc` indexer is very similar to `.loc` but only uses integer locations to
 + Selecting rows and columns both by integer position: `df.iloc[[2,3], [0, 4]]` (two rows and two columns)
 
 > Slicing also fully possible: `df.iloc[3:6, [1, 4]]` OR `df.iloc[2:5, 2:5]`, etc. Even selecting all rows for a single columns: `df.iloc[:, 5]`
+
++ Select row by integer position and column by label: `df.iloc[<ROW_NUMBER>, df.columns.get_loc('<COLUMN_NAME>')]`
++ Select row by label and column by integer position: `df.iloc[df.index.get_loc('<ROW_INDEX_LABEL>'), <COLUMN_NUMBER>]`
 
 ### `.at` Indexer
 

@@ -31,9 +31,13 @@ pandas.core.indexes.base.Index (Used for both row index and column label)
 
 ### Index and Column Name
 
++ rename index: `df.rename(index={0:'zero',1:'one'}, inplace=True)`
++ rename column names: `df.rename(columns={'pop':'population', 'lifeExp':'life_exp', 'gdpPercap':'gdp_per_cap'}, inplace=True)`
+
+
 #### Title
 
-+ Set title name: `df.index.name = 'my index title'`
++ Set title name: `df.index.name = 'my index title'` OR `df.rename('my index title')`
 
 #### Setting Index and Column names
 

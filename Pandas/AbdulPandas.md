@@ -40,7 +40,7 @@ pandas.core.indexes.base.Index (Used for both row index and column label)
 #### Getting integer position and labels
 
 + Get row label by providing the integer position: `df.index[0]`
-+ Get row integer position by providing the row label: df.index.get_loc(0)
++ Get row integer position by providing the row label: `df.index.get_loc(0)`
 + Get column label by providing the integer position: `df.columns[0]`
 + Get column integer position by providing the label: `df.columns.get_loc('a')`
 

@@ -6,8 +6,8 @@ Series
 
 ### Components:
 
-+ ser.index: Labels
-+ ser.values: Values
++ `ser.index`: Labels
++ `ser.values`: Values
 
 ### Series operations:
 
@@ -27,13 +27,13 @@ DataFrames
 pandas.core.indexes.base.Index (Used for both row index and column label)
 ---
 
-+ Get all index values: df.index.values (*INDEX is the label of the row*)
++ Get all index values: `df.index.values` (*INDEX is the label of the row*)
 
 ### Index and Column Name
 
 #### Title
 
-+ Set title name: df.index.name = 'my index title'
++ Set title name: `df.index.name = 'my index title'`
 
 #### Setting Index and Column names
 

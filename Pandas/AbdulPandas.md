@@ -123,3 +123,7 @@ Similar to iloc, in that both provide integer-based lookups. Use iat if you only
 
 +  Get value from DataFrame: `df.iat[1, 2]`
 +  Get value from Series: `df.loc[0].iat[1]`
+
+### Selecting by value
+
+https://stackoverflow.com/questions/17071871/how-to-select-rows-from-a-dataframe-based-on-column-values
